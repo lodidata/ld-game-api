@@ -1,0 +1,79 @@
+{
+  "name": "slim/slim-skeleton",
+  "description": "A Slim Framework skeleton application for rapid development",
+  "keywords": [
+    "microframework",
+    "rest",
+    "router",
+    "psr7"
+  ],
+  "homepage": "http://github.com/slimphp/Slim-Skeleton",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Josh Lockhart",
+      "email": "info@joshlockhart.com",
+      "homepage": "http://www.joshlockhart.com/"
+    }
+  ],
+  "require": {
+    "php": "^7.3",
+    "slim/slim": "^3.1",
+    "slim/php-view": "^2.0",
+    "monolog/monolog": "^1.2.0",
+    "illuminate/database": "~5.5",
+    "respect/validation": "^1.1",
+    "symfony/cache": "^3.4",
+    "predis/predis": "^1.1",
+    "illuminate/pagination": "^5.5",
+    "workerman/workerman": "^4.0",
+    "workerman/channel": "dev-master",
+    "php-amqplib/php-amqplib": "^2.7@dev",
+    "workerman/mysql": "dev-master",
+    "aws/aws-sdk-php": "^3.0",
+    "lcobucci/jwt": "3.3.3",
+    "illuminate/events": "^5.5",
+    "awurth/slim-validation": "^3.0",
+    "rmccue/requests": "^1.8.1",
+    "jiguang/jsms": "~1.0",
+    "phpmailer/phpmailer": "6.7.1",
+    "hashids/hashids": "^2.0",
+    "smi2/phpclickhouse": "1.4.6",
+    "graze/guzzle-jsonrpc": "3.2.1",
+    "ext-json": "*",
+    "ext-bcmath": "*",
+    "ext-pdo": "*",
+    "ext-mysqli": "*",
+    "ext-xlswriter": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "9.6.3",
+    "ext-openssl": "*",
+    "ext-gd": "*",
+    "ext-curl": "*",
+    "ext-simplexml": "*",
+    "ext-iconv": "*",
+    "ext-xml": "*",
+    "ext-shmop": "*"
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Utils\\": "utils/",
+      "Logic\\": "logic/",
+      "Lib\\": "lib/",
+      "Model\\": "model/"
+    }
+  },
+  "config": {
+    "process-timeout": 0,
+    "platform": {
+      "php": "7.3.33"
+    }
+  },
+  "scripts": {
+    "start": "php -S localhost:9999 -t public index.php",
+    "api.www": "php -S 127.0.0.1:80 -t public index.php",
+    "api.admin": "php -S admin-api.sayahao.com:80 -t public index.php",
+    "test": "phpunit"
+  }
+}
